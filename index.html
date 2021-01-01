@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="ремонт техники Dell сервис">
+    <meta name="description" content="Авторизованный сервисный центр по ремонту техники Dell">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CPS Услуги и сервисы</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="flex-column">
+            <nav class="nav-buttons">
+                <div class="flex-start">
+                    <button name="burger"><img src="icons/icburger.svg" width="18" height="16" marginalt="меню"></button>
+                    <div class="nav__logo">
+                        <div class="divider1"></div>
+                        <img src="icons/logo.svg" width="96" height="50" alt="cps">
+                        <div class="divider2"></div>
+                    </div>
+                </div>
+                <div class="flex-end">
+                    <button name="call"><img src="icons/iccall.svg" width="20" height="20" alt="позвонить"></button>
+                    <button name="chat"><img src="icons/icchat.svg" width="20" height="20" alt="написать в чат"></button>
+                    <button name="group"><img src="icons/icgroup.svg" width="20" height="20" alt="перейти в группу"></button>
+                    <div class="divider1"></div>
+                    <button name="repair"><img src="icons/icrepair.svg" width="20" height="20" alt="оставить заявку"></button>
+                    <button name="status"><img src="icons/icstatus.svg" width="16" height="20" alt="статус ремонта"></button>
+                </div>
+            </nav>
+            <div class="flex-raw">
+                <div class="flex-start">
+                    <div class='h1-lighter'></div>
+                    <h1> Услуги и сервисы</h1>
+                </div>
+                <aside class="h1-buttons">
+                    <div class="flex-end">
+                        <h4><a href="#">Оставить заявку</a></h4><button name="repair"><img src="icons/icrepair.svg" width="20" height="20" alt="оставить заявку"></button>
+                        <h4><a href="#">Cтатус ремонта</a></h4><button name="status"><img src="icons/icstatus.svg" width="16" height="20" alt="статус ремонта"></button>
+                    </div>
+                </aside>
+            </div>
+            <aside>
+                <nav class="nav-text">
+                    <div class="tabs">
+                        <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                        <label for="tab-btn-1">Ремонтируемые бренды</label>
+                        <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                        <label for="tab-btn-2">Ремонтируемые устройства</label>
+                        <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                        <label for="tab-btn-3">Дополнительные услуги</label>
+                        <!-- <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                        <label for="tab-btn-3">Дополнительные услуги</label>
+                        <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                        <label for="tab-btn-3">Дополнительные услуги</label> -->
+
+                        <!-- <ul class="nav-text__list">
+                            <li class="item"><a href="#">Ремонтируемые бренды</a></li>
+                            <li class="item"><a href="#">Ремонтируемые устройства</a></li>
+                            <li class="item"><a href="#">Дополнительные услуги</a></li>
+                            <li class="item"><a href="#">Цены на услуги</a></li>
+                            <li class="item"><a href="#">Специальные цены</a></li><br><br>
+                            <li class="item"><a href="#">Отзывы</a></li>
+                        </ul> -->
+                    </div>
+                </nav>
+            </aside>
+        </div>
+    </header>
+
+
+    <main>
+        <article>
+            <p>
+                <div class="tabs-content">
+                    <div id="content-1">
+                        Содержимое 1...
+                    </div>
+                    <div id="content-2">
+                        Содержимое 2...
+                    </div>
+                    <div id="content-3">
+                        Содержимое 3...
+                    </div>
+
+                    <!-- <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                        <span id="dots">...</span>
+                    </p>
+
+
+                    <span id="more">
+                                    <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                        </span> -->
+                </div>
+                <button onclick="myFunction()" class="expand" name="expand"><img id="myImg" src="icons/icexpand.svg" width="8" height="11" alt="далее"><span id="myBtn">&nbsp;&nbsp;Читать далее</span></button>
+            </p>
+            <picture>
+                <source srcset="images/cps1120.png" media="(min-width: 1120px)">
+                <source srcset="images/cps768.png" media="(min-width: 768px) and (max-width: 1119px)">
+                <img class="article__illustration" src="images/cps320.png" alt="illustration">
+            </picture>
+        </article>
+    </main>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+            var btnImg = document.getElementById("myImg");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "&nbsp;&nbsp;Читать далее";
+                moreText.style.display = "none";
+                btnImg.className = "";
+
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "&nbsp;&nbsp;Скрыть";
+                moreText.style.display = "inline";
+                btnImg.className = "rotate";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
