@@ -46,27 +46,17 @@
             </div>
             <aside>
                 <nav class="nav-text">
-                    <div class="tabs">
-                        <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
-                        <label for="tab-btn-1">Ремонтируемые бренды</label>
-                        <input type="radio" name="tab-btn" id="tab-btn-2" value="">
-                        <label for="tab-btn-2">Ремонтируемые устройства</label>
-                        <input type="radio" name="tab-btn" id="tab-btn-3" value="">
-                        <label for="tab-btn-3">Дополнительные услуги</label>
-                        <!-- <input type="radio" name="tab-btn" id="tab-btn-3" value="">
-                        <label for="tab-btn-3">Дополнительные услуги</label>
-                        <input type="radio" name="tab-btn" id="tab-btn-3" value="">
-                        <label for="tab-btn-3">Дополнительные услуги</label> -->
-
-                        <!-- <ul class="nav-text__list">
-                            <li class="item"><a href="#">Ремонтируемые бренды</a></li>
-                            <li class="item"><a href="#">Ремонтируемые устройства</a></li>
-                            <li class="item"><a href="#">Дополнительные услуги</a></li>
-                            <li class="item"><a href="#">Цены на услуги</a></li>
-                            <li class="item"><a href="#">Специальные цены</a></li><br><br>
-                            <li class="item"><a href="#">Отзывы</a></li>
-                        </ul> -->
+                    <div class=nav-textgradient>
                     </div>
+                    <ul class="nav-textlist">
+                        <li class="nav-textlist__item nav-textlist__item--act"><a href="#">Ремонтируемые бренды</a></li>
+                        <li class="nav-textlist__item"><a href="#">Ремонтируемые устройства</a></li>
+                        <li class="nav-textlist__item"><a href="#">Дополнительные услуги</a></li>
+                        <li class="nav-textlist__item"><a href="#">Цены на услуги</a></li>
+                        <li class="nav-textlist__item"><a href="#">Адреса сервисных центров</a></li>
+                        <li class="nav-textlist__item"><a href="#">Специальные цены</a></li><br><br>
+                        <li class="nav-textlist__item"><a href="#">Отзывы</a></li>
+                    </ul>
                 </nav>
             </aside>
         </div>
@@ -75,34 +65,26 @@
 
     <main>
         <article>
-            <p>
-                <!-- <div class="tabs-content"> -->
-                <!-- <div id="content-1">
-                        Содержимое 1...
-                    </div>
-                    <div id="content-2">
-                        Содержимое 2...
-                    </div>
-                    <div id="content-3">
-                        Содержимое 3...
-                    </div> -->
-
+            <div class='content-text'>
                 <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
                     <span id="dots">...</span>
                 </p>
-
-
                 <span id="more">
-                                    <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                            <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
                         </span>
-                <!-- </div> -->
-                <button onclick="myFunction()" class="expand" name="expand"><img id="myImg" src="icons/icexpand.svg" width="8" height="11" alt="далее"><span id="myBtn">&nbsp;&nbsp;Читать далее</span></button>
-            </p>
-            <picture>
-                <source srcset="images/cps1120.png" media="(min-width: 1120px)">
-                <source srcset="images/cps768.png" media="(min-width: 768px) and (max-width: 1119px)">
-                <img class="article__illustration" src="images/cps320.png" alt="illustration">
-            </picture>
+
+                <button onclick="myFunction()" class="expclass" name="expand"><img id="moreImg" src="icons/icexpand.svg" width="10" height="16" alt="далее"><span id="myBtn">&nbsp;&nbsp;Читать далее</span></button>
+
+            </div>
+
+            <div class='content-image'>
+                <picture>
+                    <source srcset="images/cps1120.png" media="(min-width: 1120px)">
+                    <source srcset="images/cps768.png" media="(min-width: 768px) and (max-width: 1119px)">
+                    <img src="images/cps320.png" alt="illustration">
+                </picture>
+
+            </div>
         </article>
     </main>
 
@@ -111,7 +93,7 @@
             var dots = document.getElementById("dots");
             var moreText = document.getElementById("more");
             var btnText = document.getElementById("myBtn");
-            var btnImg = document.getElementById("myImg");
+            var btnImg = document.getElementById("moreImg");
 
             if (dots.style.display === "none") {
                 dots.style.display = "inline";
