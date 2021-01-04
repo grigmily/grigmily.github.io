@@ -61,7 +61,7 @@
             </aside>
         </div>
     </header>
-    <!-- SIDEBAR_GB -->
+    <!-- SIDEBAR -->
     <div class='burger-menu'>
         <div class='sidebar'>
             <header class="sidebar-header">
@@ -72,8 +72,8 @@
                 <button id="search"><img src="icons/icsearch.svg" width="16" height="20" alt="статус ремонта"></button>
             </header>
 
-            <div class="sidebar-nav">
-                <nav>
+            <nav>
+                <div class="sidebar-nav">
                     <ul class="sidebar-menu">
                         <li class="sidebar-menu__item sidebar-menu__item--active"><a href="#">Ремонт техники</a>
                         </li>
@@ -85,76 +85,12 @@
                         <li class="sidebar-menu__item"><a href="#">Наши сервисные центры</a></li>
                         <li class="sidebar-menu__item"><a href="#">Контакты</a></li>
                     </ul>
-                </nav>
-            </div>
-
-            <footer class="sidebar-footer">
-                <div class="contact-icons footer__contact-icons">
-                    <a href="#" class="icon contact-icons__call"></a>
-
-                    <a href="#" class="icon contact-icons__chat"></a>
-
-                    <a href="#" class="icon contact-icons__profile"></a>
                 </div>
-
-                <a href="mailto:mail@cps.com" class="footer__mail">mail@cps.com</a>
-                <a href="tel:88008908900" class="footer__phone">8 800 890 8900</a>
-
-                <div class="languages">
-                    <div class="languages__button languages__russian">
-                        <input type="radio" name="language" id="russian" checked="checked">
-                        <label for="russian">ru</label>
-                    </div>
-                    <div class="languages__button languages__english">
-                        <input type="radio" name="language" id="english">
-                        <label for="english">en</label>
-                    </div>
-                    <div class="languages__button languages__chinese">
-                        <input type="radio" name="language" id="chinese">
-                        <label for="chinese">ch</label>
-                    </div>
-
-                </div>
-            </footer>
+            </nav>
         </div>
-
-        <!-- модальные окна -->
-        <div class="modal-feedback">
-            <button class="modal-feedback__button"></button>
-            <div class="modal-feedback__title">Обратная связь</div>
-            <form action="/" method="post" class="form-grope">
-                <input type="text" class="form-grope__input" placeholder="Имя">
-                <input type="tel" class="form-grope__input" placeholder="Телефон">
-                <input type="email" class="form-grope__input" placeholder="Электронная почта">
-                <textarea class="form-grope__textarea" placeholder="Сообщение"></textarea>
-                <p>Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь с нашей
-                    <span>политикой
-                  конфиденциальности</span></p>
-                <div class="form-grope__button-container">
-                    <button type="submit" class="form-button">Отправить</button>
-                </div>
-            </form>
-        </div>
-
-        <div class="modal-call">
-            <button class="modal-call__button"></button>
-            <div class="modal-call__title">Заказать звонок</div>
-            <form action="/" method="post" class="form-grope">
-
-                <input type="tel" class="form-grope__input" placeholder="Телефон">
-
-                <p>Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь с нашей
-                    <span>политикой
-                  конфиденциальности</span></p>
-                <div class="form-grope__button-container">
-                    <button type="submit" class="form-button">Отправить</button>
-                </div>
-            </form>
-        </div>
-        <!-- Оверлей бургер-меню -->
-        <div class="burger-menu__overlay"></div>
+        <!--sidebar end-->
     </div>
-
+    <!--Burger-menu end-->
     <main>
         <article>
             <div class='content-text'>
