@@ -6,17 +6,17 @@
     <meta name="keywords" content="ремонт техники Dell сервис">
     <meta name="description" content="Авторизованный сервисный центр по ремонту техники Dell">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
     <title>CPS Услуги и сервисы</title>
 </head>
 
 <body>
 
-    <header>
+    <header class=main-header>
         <div class="flex-column">
             <nav class="nav-buttons">
                 <div class="flex-start">
-                    <button name="burger"><img src="icons/icburger.svg" width="18" height="16" marginalt="меню"></button>
+                    <button id="burger"><img src="icons/icburger.svg" width="18" height="16" marginalt="меню"></button>
                     <div class="nav__logo">
                         <div class="divider1"></div>
                         <img src="icons/logo.svg" width="96" height="50" alt="cps">
@@ -24,12 +24,12 @@
                     </div>
                 </div>
                 <div class="flex-end">
-                    <button name="call"><img src="icons/iccall.svg" width="20" height="20" alt="позвонить"></button>
-                    <button name="chat"><img src="icons/icchat.svg" width="20" height="20" alt="написать в чат"></button>
-                    <button name="group"><img src="icons/icgroup.svg" width="20" height="20" alt="перейти в группу"></button>
+                    <button id="call"><img src="icons/iccall.svg" width="20" height="20" alt="позвонить"></button>
+                    <button id="chat"><img src="icons/icchat.svg" width="20" height="20" alt="написать в чат"></button>
+                    <button id="group"><img src="icons/icgroup.svg" width="20" height="20" alt="перейти в группу"></button>
                     <div class="divider1"></div>
-                    <button name="repair"><img src="icons/icrepair.svg" width="20" height="20" alt="оставить заявку"></button>
-                    <button name="status"><img src="icons/icstatus.svg" width="16" height="20" alt="статус ремонта"></button>
+                    <button id="repair"><img src="icons/icrepair.svg" width="20" height="20" alt="оставить заявку"></button>
+                    <button id="status"><img src="icons/icstatus.svg" width="16" height="20" alt="статус ремонта"></button>
                 </div>
             </nav>
             <div class="flex-raw">
@@ -39,8 +39,8 @@
                 </div>
                 <aside class="h1-buttons">
                     <div class="flex-end">
-                        <h4><a href="#">Оставить заявку</a></h4><button name="repair"><img src="icons/icrepair.svg" width="20" height="20" alt="оставить заявку"></button>
-                        <h4><a href="#">Cтатус ремонта</a></h4><button name="status"><img src="icons/icstatus.svg" width="16" height="20" alt="статус ремонта"></button>
+                        <h4><a href="#">Оставить заявку</a></h4><button id="repair"><img src="icons/icrepair.svg" width="20" height="20" alt="оставить заявку"></button>
+                        <h4><a href="#">Cтатус ремонта</a></h4><button id="status"><img src="icons/icstatus.svg" width="16" height="20" alt="статус ремонта"></button>
                     </div>
                 </aside>
             </div>
@@ -61,7 +61,99 @@
             </aside>
         </div>
     </header>
+    <!-- SIDEBAR_GB -->
+    <div class='burger-menu'>
+        <div class='sidebar'>
+            <header class="sidebar-header">
+                <button id="close"><img src="icons/icclose.svg" width="20" height="20" alt="закрыть"></button>
+                <div class="sidebar sidebar-header sidebar-logo">
+                    <img src="icons/logo.svg" width="96" height="50" alt="cps">
+                </div>
+                <button id="search"><img src="icons/icsearch.svg" width="16" height="20" alt="статус ремонта"></button>
+            </header>
 
+            <div class="sidebar-nav">
+                <nav>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu__item sidebar-menu__item--active"><a href="#">Ремонт техники</a>
+                        </li>
+                        <li class="sidebar-menu__item"><a href="#">Услуги и сервисы</a></li>
+                        <li class="sidebar-menu__item"><a href="#">Корпоративным клиентам</a></li>
+                        <li class="sidebar-menu__item"><a href="#">Продавцам техники</a></li>
+                        <li class="sidebar-menu__item"><a href="#">Партнерам</a></li>
+                        <li class="sidebar-menu__item"><a href="#">Производителям</a></li>
+                        <li class="sidebar-menu__item"><a href="#">Наши сервисные центры</a></li>
+                        <li class="sidebar-menu__item"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <footer class="sidebar-footer">
+                <div class="contact-icons footer__contact-icons">
+                    <a href="#" class="icon contact-icons__call"></a>
+
+                    <a href="#" class="icon contact-icons__chat"></a>
+
+                    <a href="#" class="icon contact-icons__profile"></a>
+                </div>
+
+                <a href="mailto:mail@cps.com" class="footer__mail">mail@cps.com</a>
+                <a href="tel:88008908900" class="footer__phone">8 800 890 8900</a>
+
+                <div class="languages">
+                    <div class="languages__button languages__russian">
+                        <input type="radio" name="language" id="russian" checked="checked">
+                        <label for="russian">ru</label>
+                    </div>
+                    <div class="languages__button languages__english">
+                        <input type="radio" name="language" id="english">
+                        <label for="english">en</label>
+                    </div>
+                    <div class="languages__button languages__chinese">
+                        <input type="radio" name="language" id="chinese">
+                        <label for="chinese">ch</label>
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+
+        <!-- модальные окна -->
+        <div class="modal-feedback">
+            <button class="modal-feedback__button"></button>
+            <div class="modal-feedback__title">Обратная связь</div>
+            <form action="/" method="post" class="form-grope">
+                <input type="text" class="form-grope__input" placeholder="Имя">
+                <input type="tel" class="form-grope__input" placeholder="Телефон">
+                <input type="email" class="form-grope__input" placeholder="Электронная почта">
+                <textarea class="form-grope__textarea" placeholder="Сообщение"></textarea>
+                <p>Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь с нашей
+                    <span>политикой
+                  конфиденциальности</span></p>
+                <div class="form-grope__button-container">
+                    <button type="submit" class="form-button">Отправить</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-call">
+            <button class="modal-call__button"></button>
+            <div class="modal-call__title">Заказать звонок</div>
+            <form action="/" method="post" class="form-grope">
+
+                <input type="tel" class="form-grope__input" placeholder="Телефон">
+
+                <p>Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь с нашей
+                    <span>политикой
+                  конфиденциальности</span></p>
+                <div class="form-grope__button-container">
+                    <button type="submit" class="form-button">Отправить</button>
+                </div>
+            </form>
+        </div>
+        <!-- Оверлей бургер-меню -->
+        <div class="burger-menu__overlay"></div>
+    </div>
 
     <main>
         <article>
@@ -73,7 +165,7 @@
                             <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
                         </span>
 
-                <button onclick="myFunction()" class="expclass" name="expand"><img id="moreImg" src="icons/icexpand.svg" width="10" height="16" alt="далее"><span id="myBtn">&nbsp;&nbsp;Читать далее</span></button>
+                <button onclick="myFunction()" class="expclass" id="expand"><img id="moreImg" src="icons/icexpand.svg" width="10" height="16" alt="далее"><span id="myBtn">&nbsp;&nbsp;Читать далее</span></button>
 
             </div>
 
