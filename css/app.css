@@ -27,7 +27,7 @@
     display: none; }
   .divider2 {
     display: flex; }
-  button #call, button #chat, button #group {
+  #call, #chat, #group {
     display: none; }
   .h1-buttons {
     display: none; }
@@ -151,7 +151,7 @@ aside {
   height: 32px;
   margin: 20px 20px; }
 
-button {
+#burger {
   margin-left: 16px; }
 
 .nav__logo {
@@ -240,7 +240,7 @@ p {
     padding-bottom: 4px;
     transform: rotate(-180deg); }
 
-button {
+#expand {
   border-radius: 0%;
   width: 135px;
   background-color: #F8F8F8;
@@ -295,7 +295,7 @@ h4 a {
     height: 10vh;
     z-index: 3;
     padding: 0vw; }
-    .sidebar .sidebar-header .button {
+    .sidebar .sidebar-header #close {
       z-index: 4; }
 
 .sidebar .sidebar-header {
