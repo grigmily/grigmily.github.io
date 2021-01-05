@@ -64,6 +64,7 @@
     <!-- SIDEBAR -->
     <div class='burger-menu'>
         <div class='sidebar'>
+            <!-- sidebar header -->
             <header>
                 <div class="sidebar-header">
                     <div class=flex-start>
@@ -77,7 +78,7 @@
 
                 </div>
             </header>
-
+            <!-- sidebar nav -->
             <nav>
                 <div class="sidebar-nav">
                     <ul class="sidebar-menu">
@@ -92,9 +93,39 @@
                     </ul>
                 </div>
             </nav>
+            <!-- sidebar footer -->
+            <footer class="sidebar-footer">
+                <div class="contact-butts">
+                    <button id="call"><img src="icons/iccall.svg" width="20" height="20" alt="позвонить"></button>
+                    <button id="chat"><img src="icons/icchat.svg" width="20" height="20" alt="написать в чат"></button>
+                    <button id="group"><img src="icons/icgroup.svg" width="20" height="20" alt="перейти в группу"></button>
+                </div>
+
+                <a href="mailto:mail@cps.com" class="sidebar-footer__mail">mail@cps.com</a>
+                <a href="tel:88008908900" class="sidebar-footer__phone">8 800 890 8900</a>
+
+                <div class="sidebar-footer__languages">
+                    <div class="language-radio">
+                        <input type="radio" name="language" id="russian" checked="checked">
+                        <label for="russian">ru</label>
+                    </div>
+                    <div class="language-radio">
+                        <input type="radio" name="language" id="english">
+                        <label for="english">en</label>
+                    </div>
+                    <div class="language-radio">
+                        <input type="radio" name="language" id="chineese">
+                        <label for="chineese">ch</label>
+                    </div>
+
+                </div>
+            </footer>
+
         </div>
         <!--sidebar end-->
+        <div class="sidebar-overlay"></div>
     </div>
+
     <!--Burger-menu end-->
     <main>
         <article>

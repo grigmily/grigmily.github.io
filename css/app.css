@@ -125,9 +125,10 @@ aside {
   list-style: none;
   margin-right: 8px;
   padding: 0 8px 0 8px;
-  border: 2px solid #F8F8F8;
-  color: #7E7E82;
-  text-decoration: none; }
+  border: 2px solid #F8F8F8; }
+  .nav-text .nav-textlist__item a {
+    color: #7E7E82;
+    text-decoration: none; }
   .nav-text .nav-textlist__item:last-of-type {
     float: left;
     list-style: none;
@@ -266,9 +267,8 @@ h4 a {
 
 .burger-menu {
   display: none;
-  width: 320px;
   height: 100vh;
-  background: white;
+  width: 320px;
   padding-top: 1.8291016vh; }
 
 @media (min-width: 320px) {
@@ -276,11 +276,13 @@ h4 a {
     display: flex;
     position: fixed; }
     .burger-menu .sidebar {
+      background: white;
       display: flex;
       width: 320px;
       height: 100vh;
       position: fixed;
-      flex-direction: column; }
+      flex-direction: column;
+      justify-content: space-between; }
       .burger-menu .sidebar header {
         width: 320px; }
         .burger-menu .sidebar header .sidebar-header {
@@ -296,6 +298,7 @@ h4 a {
           .burger-menu .sidebar header .sidebar-header .flex-end {
             margin: 0; }
       .burger-menu .sidebar nav {
+        display: flex;
         height: 85vh; }
         .burger-menu .sidebar nav .sidebar-nav {
           margin-top: 4vh;
@@ -328,10 +331,55 @@ h4 a {
                 height: 40px;
                 background-color: #41F6D7;
                 border-radius: 0 4px 4px 0; }
+      .burger-menu .sidebar footer.sidebar-footer {
+        margin-bottom: 3vh;
+        margin-top: auto;
+        margin-left: 24px; }
+        .burger-menu .sidebar footer.sidebar-footer a {
+          text-decoration: none;
+          display: block;
+          color: #1B1C21; }
+        .burger-menu .sidebar footer.sidebar-footer .contact-butts {
+          display: block;
+          margin-bottom: 1.5625vh; }
+          .burger-menu .sidebar footer.sidebar-footer .contact-butts #call, .burger-menu .sidebar footer.sidebar-footer .contact-butts #chat, .burger-menu .sidebar footer.sidebar-footer .contact-butts #group {
+            display: inline-block; }
+        .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__mail {
+          font-size: 1.2rem;
+          margin-bottom: 1.171875vh; }
+        .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__phone {
+          font-size: 2rem;
+          margin-bottom: 3.90625vh; }
+        .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__languages {
+          font-size: 2rem; }
+          .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__languages .language-radio {
+            display: inline-block; }
+            .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__languages .language-radio #russian, .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__languages .language-radio #english, .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__languages .language-radio #chineese {
+              display: none; }
+              .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__languages .language-radio #russian:checked + label, .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__languages .language-radio #english:checked + label, .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__languages .language-radio #chineese:checked + label {
+                color: #7E7E82; }
+            .burger-menu .sidebar footer.sidebar-footer .sidebar-footer__languages .language-radio label:hover {
+              cursor: pointer; }
   #moreImg {
     position: relative; }
   .main-header, .main, #moreImg {
-    z-index: -1; } }
+    z-index: -1; }
+  .sidebar-overlay {
+    position: fixed;
+    left: 320px;
+    height: 103.6582032%;
+    width: 100%;
+    background-color: blue;
+    top: -1.8291016vh;
+    background: -webkit-linear-gradient(right, #f8f8f8 70%, rgba(248, 248, 248, 0.5) 100%);
+    /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+    background: -moz-linear-gradient(right, #f8f8f8 10%, rgba(248, 248, 248, 0.5) 100%);
+    /* Firefox 3.6-15 */
+    background: -o-linear-gradient(right, #f8f8f8 70%, rgba(248, 248, 248, 0.5) 100%);
+    /* Opera 11.1-12 */
+    background: linear-gradient(to right, #f8f8f8 10%, rgba(248, 248, 248, 0.5) 100%);
+    /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+    Opacity: 1; } }
 
 .burger-menu .sidebar ul li {
   list-style-type: none; }
