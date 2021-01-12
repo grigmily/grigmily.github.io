@@ -171,6 +171,10 @@ html {
     display: flex;
 }
 
+.swiper-wrapper>.swiper-slide:nth-child(n+8) {
+    display: none;
+}
+
 @media (max-width: 320px) {
     .swiper-container {
         display: block;
