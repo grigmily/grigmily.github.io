@@ -1,179 +1,92 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="keywords" content="ремонт техники Dell сервис">
-    <meta name="description" content="Авторизованный сервисный центр по ремонту техники Dell">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/app.css">
-    <title>CPS Услуги и сервисы</title>
+    <link rel="stylesheet" href="css/slider.css">
+
 </head>
 
 <body>
+    <!-- Slider main container -->
+    <section class="swiper-container" id="brands">
 
-    <header class=main-header>
-        <div class="flex-column">
-            <nav class="nav-buttons">
-                <div class="flex-start">
-                    <button id="burger"><img src="icons/icburger.svg" width="18" height="16" marginalt="меню"></button>
-                    <div class="nav__logo">
-                        <div class="divider1"></div>
-                        <img src="icons/logo.svg" width="96" height="50" alt="cps">
-                        <div class="divider2"></div>
-                    </div>
-                </div>
-                <div class="flex-end">
-                    <button id="call"><img src="icons/iccall.svg" width="20" height="20" alt="позвонить"></button>
-                    <button id="chat"><img src="icons/icchat.svg" width="20" height="20" alt="написать в чат"></button>
-                    <button id="group"><img src="icons/icgroup.svg" width="20" height="20" alt="перейти в группу"></button>
-                    <div class="divider1"></div>
-                    <button id="repair"><img src="icons/icrepair.svg" width="20" height="20" alt="оставить заявку"></button>
-                    <button id="status"><img src="icons/icstatus.svg" width="16" height="20" alt="статус ремонта"></button>
-                </div>
-            </nav>
-            <div class="flex-raw">
-                <div class="flex-start">
-                    <div class='h1-lighter'></div>
-                    <h1> Услуги и сервисы</h1>
-                </div>
-                <aside class="h1-buttons">
-                    <div class="flex-end">
-                        <h4><a href="#">Оставить заявку</a></h4><button id="repair"><img src="icons/icrepair.svg" width="20" height="20" alt="оставить заявку"></button>
-                        <h4><a href="#">Cтатус ремонта</a></h4><button id="status"><img src="icons/icstatus.svg" width="16" height="20" alt="статус ремонта"></button>
-                    </div>
-                </aside>
+        <h5 class="swiper-container__header">Ремонт техники различных брендов</h5>
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" id='lenovo-slide'>
+                <div class='logocomp' id='lenovo'></div>
+                <button id='go' title='открыть'></button>
             </div>
-            <aside>
-                <nav class="nav-text">
-                    <div class=nav-textgradient>
-                    </div>
-                    <ul class="nav-textlist">
-                        <li class="nav-textlist__item nav-textlist__item--act"><a href="#">Ремонтируемые бренды</a></li>
-                        <li class="nav-textlist__item"><a href="#">Ремонтируемые устройства</a></li>
-                        <li class="nav-textlist__item"><a href="#">Дополнительные услуги</a></li>
-                        <li class="nav-textlist__item"><a href="#">Цены на услуги</a></li>
-                        <li class="nav-textlist__item"><a href="#">Адреса сервисных центров</a></li>
-                        <li class="nav-textlist__item"><a href="#">Специальные цены</a></li><br><br>
-                        <li class="nav-textlist__item"><a href="#">Отзывы</a></li>
-                    </ul>
-                </nav>
-            </aside>
+            <div class="swiper-slide" id='samsung-slide'>
+                <div class='logocomp' id='samsung'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+            <div class="swiper-slide" id='apple-slide'>
+                <div class='logocomp' id='apple'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+            <div class="swiper-slide" id='viewsonic-slide'>
+                <div class='logocomp' id='viewsonic'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+            <div class="swiper-slide" id='bosch-slide'>
+                <div class='logocomp' id='bosch'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+            <div class="swiper-slide" id='hp-slide'>
+                <div class='logocomp' id='hp'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+            <div class="swiper-slide" id='acer-slide'>
+                <div class='logocomp' id='acer'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+            <div class="swiper-slide" id='sony-slide'>
+                <div class='logocomp' id='sony'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+            <div class="swiper-slide">
+                <div class='logocomp' id='lenovo'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+            <div class="swiper-slide">
+                <div class='logocomp' id='samsung'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+            <div class="swiper-slide">
+                <div class='logocomp' id='apple'></div>
+                <button id='go' title='открыть'></button>
+            </div>
+
+            <div class=swiper-rightgradient>
+            </div>
+            <br>
+            <br>
+
+            <input type="checkbox" class="slide-expanded" id="slide-expanded">
+            <label for="slide-expanded" class="slide-expanded__label">
+                    <img id="showmoreImg" src="icons/icexpand.svg" width="10" height="16" alt="Показать все">
+                 </label>
         </div>
-    </header>
-    <!-- SIDEBAR -->
-    <div class='burger-menu'>
-        <div class='sidebar'>
-            <!-- sidebar header -->
-            <header>
-                <div class="sidebar-header">
-                    <div class=flex-start>
-                        <button id="close"><img src="icons/icclose.svg" width="20" height="20" alt="закрыть"></button>
-                        <div class="sidebar-logo">
-                            <img src="icons/logo.svg" width="96" height="50" alt="cps">
-                        </div>
-                    </div>
 
-                    <button id="search"><img src="icons/icsearch.svg" width="16" height="20"  alt="статус ремонта"></button>
 
-                </div>
-            </header>
-            <!-- sidebar nav -->
-            <nav>
-                <div class="sidebar-nav">
-                    <ul class="sidebar-menu">
-                        <li class="sidebar-menu__item sidebar-menu__item--act"><a href="#">Ремонт техники</a></li>
-                        <li class="sidebar-menu__item"><a href="#">Услуги и сервисы</a></li>
-                        <li class="sidebar-menu__item"><a href="#">Корпоративным клиентам</a></li>
-                        <li class="sidebar-menu__item"><a href="#">Продавцам техники</a></li>
-                        <li class="sidebar-menu__item"><a href="#">Партнерам</a></li>
-                        <li class="sidebar-menu__item"><a href="#">Производителям</a></li>
-                        <li class="sidebar-menu__item"><a href="#">Наши сервисные центры</a></li>
-                        <li class="sidebar-menu__item"><a href="#">Контакты</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- sidebar footer -->
-            <footer class="sidebar-footer">
-                <div class="contact-butts">
-                    <button id="call"><img src="icons/iccall.svg" width="20" height="20" alt="позвонить"></button>
-                    <button id="chat"><img src="icons/icchat.svg" width="20" height="20" alt="написать в чат"></button>
-                    <button id="group"><img src="icons/icgroup.svg" width="20" height="20" alt="перейти в группу"></button>
-                </div>
 
-                <a href="mailto:mail@cps.com" class="sidebar-footer__mail">mail@cps.com</a>
-                <a href="tel:88008908900" class="sidebar-footer__phone">8 800 890 8900</a>
 
-                <div class="sidebar-footer__languages">
-                    <div class="language-radio">
-                        <input type="radio" name="language" id="russian" checked="checked">
-                        <label for="russian">ru</label>
-                    </div>
-                    <div class="language-radio">
-                        <input type="radio" name="language" id="english">
-                        <label for="english">en</label>
-                    </div>
-                    <div class="language-radio">
-                        <input type="radio" name="language" id="chineese">
-                        <label for="chineese">ch</label>
-                    </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-                </div>
-            </footer>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
-        </div>
-        <!--sidebar end-->
-        <div class="sidebar-overlay"></div>
-    </div>
-
-    <!--Burger-menu end-->
-    <main>
-        <article>
-            <div class='content-text'>
-                <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-                    <span id="dots">...</span>
-                </p>
-                <span id="more">
-                            <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-                        </span>
-
-                <button onclick="myFunction()" class="expclass" id="expand"><img id="moreImg" src="icons/icexpand.svg" width="10" height="16" alt="далее"><span id="myBtn">&nbsp;&nbsp;Читать далее</span></button>
-
-            </div>
-
-            <div class='content-image'>
-                <picture>
-                    <source srcset="images/cps1120.png" media="(min-width: 1120px)">
-                    <source srcset="images/cps768.png" media="(min-width: 768px) and (max-width: 1119px)">
-                    <img src="images/cps320.png" alt="illustration">
-                </picture>
-
-            </div>
-        </article>
-    </main>
-
-    <script type="text/javascript">
-        function myFunction() {
-            var dots = document.getElementById("dots");
-            var moreText = document.getElementById("more");
-            var btnText = document.getElementById("myBtn");
-            var btnImg = document.getElementById("moreImg");
-
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
-                btnText.innerHTML = "&nbsp;&nbsp;Читать далее";
-                moreText.style.display = "none";
-                btnImg.className = "";
-
-            } else {
-                dots.style.display = "none";
-                btnText.innerHTML = "&nbsp;&nbsp;Скрыть";
-                moreText.style.display = "inline";
-                btnImg.className = "rotate";
-            }
-        }
-    </script>
-
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </section>
 </body>
 
 </html>

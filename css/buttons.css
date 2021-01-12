@@ -1,0 +1,23 @@
+button {
+    border-radius: 100%;
+    background-color: #FF3E79;
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin: 0 8px 0 8px;
+    cursor: pointer;
+}
+
+button img {
+    transform: translateY(2px);
+}
+
+button#go {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../icons/icgo.svg");
+    border: 2px solid #FF3E79;
+}
