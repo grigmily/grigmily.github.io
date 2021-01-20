@@ -7,17 +7,26 @@
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+
+
+
 
 </head>
 
 <body>
-    <!-- Slider main container -->
-    <section class="swiper-container" id="brands">
+    <h5 class="swiper-container__header">Ремонт техники различных брендов</h5>
 
-        <h5 class="swiper-container__header">Ремонт техники различных брендов</h5>
+    <!-- Slider main container -->
+    <div class="swiper-container" id="brands">
+
         <!-- Additional required wrapper -->
+        <input type="checkbox" class="slide-expanded" id="slide-expanded" unchecked>
+
         <div class="swiper-wrapper">
             <!-- Slides -->
+
             <div class="swiper-slide" id='lenovo-slide'>
                 <div class='logocomp' id='lenovo'></div>
                 <button id='go' title='открыть'></button>
@@ -62,11 +71,9 @@
                 <div class='logocomp' id='apple'></div>
                 <button id='go' title='открыть'></button>
             </div>
-
-            <div class=swiper-rightgradient>
-            </div>
         </div>
-        <input type="checkbox" class="slide-expanded" id="slide-expanded">
+
+
         <label for="slide-expanded" class="slide-expanded__label">
                         <img id="showmoreImg" src="icons/icexpand.svg" width="10" height="16" alt="Показать все">
                      </label>
@@ -84,7 +91,58 @@
 
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
-    </section>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.js" integrity="sha512-1JH7KZzcfIna9+CEaSp1ckBa5Zn7phMi79M2GwuVqhT3qzMBZIMCagxvbAT8doQ4B6w1zbLTefn3tbkfrdbG4Q==" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
+
+    <script>
+        const slider = document.querySelector('.swiper-container');
+
+        function mobileSlider() {
+            if (window.innerWidth <= 320 && slider.dataset.mobile == 'false') {
+
+                mySwiper = new Swiper(slider, {
+                    //  Optional parameters
+                    direction: 'horizontal',
+                    loop: true,
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                    // And if we need scrollbar
+                    // scrollbar: {
+                    //     el: '.swiper-scrollbar',
+                    // },
+                });
+                slider.dataset.mobile = 'true';
+            }
+            if (window.innerWidth > 320) {
+                slider.dataset.mobile = 'false';
+
+                if (slider.classList.contains('swiper-container-initialized')) {
+                    mySwiper.destroy();
+                }
+            }
+        };
+
+        mobileSlider();
+        window.addEventListener('resize', () => {
+            mobileSlider();
+        });
+    </script>
+
 </body>
 
 </html>
