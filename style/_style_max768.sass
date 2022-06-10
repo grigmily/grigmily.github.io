@@ -1,0 +1,263 @@
+@media (max-width: 768px)
+    
+    //(ALL)
+
+    \:root
+        --font-size-h1: 32px
+        --font-size-h2: 32px
+
+    body
+        margin: 0
+        overflow-x: clip
+
+    .container
+        padding: 0
+
+        //---header---
+
+        .header-container
+            justify-content: flex-end
+            background: url('assets/img/jpg/768/bg768.jpg')
+            background-position: center 0
+            background-repeat: no-repeat
+            a
+                margin-inline-end: auto
+                padding-inline-start: 40px
+
+            .langswitch
+                margin-right: 22px
+
+                //--modal menu--
+
+            nav.nav
+                display: flex
+                flex-direction: column
+                width: 0
+                position: absolute
+                top: 0
+                right: 0
+                background-color: black
+                transition: all 1s ease-in-out
+                visibility: collapse
+                padding-block: 5.3em
+                ul.nav-list
+                    display: block
+                    padding: 0
+                    margin: 0
+                    line-height: 4.45em
+                    padding-block: 1.25em
+                    visibility: inherit
+                    li
+                        visibility: inherit
+                        a
+                            font-size: 0
+                            padding: 0
+                            
+                            
+            //(hamb)
+
+            .three
+                display: block
+                -webkit-box-sizing: border-box
+                -moz-box-sizing: border-box
+                box-sizing: border-box
+                color: #ecf0f1
+                text-align: center
+                margin-right: 44px
+
+                .hamburger
+                    .line
+                        width: 50px
+                        height: 2px
+                        background-color: #ecf0f1
+                        display: block
+                        margin: 8px auto
+                        -webkit-transition: all 0.3s ease-in-out
+                        -o-transition: all 0.3s ease-in-out
+                        transition: all 0.3s ease-in-out
+
+                    &:hover
+                        cursor: pointer
+
+                    &.open
+                        animation: smallbig 0.6s forwards
+
+                        .line
+                            &:nth-child(1), &:nth-child(2), &:nth-child(3)
+                                -webkit-transition-delay: 0.2s
+                                -o-transition-delay: 0.2s
+                                transition-delay: 0.2s
+
+                            &:nth-child(2)
+                                opacity: 0
+
+                            &:nth-child(1)
+                                -webkit-transform: translateY(13px) rotate(45deg)
+                                -ms-transform: translateY(13px) rotate(45deg)
+                                -o-transform: translateY(13px) rotate(45deg)
+                                transform: scale(1.15) translateY(9px) rotate(45deg)
+
+                            &:nth-child(3)
+                                -webkit-transform: translateY(-13px) rotate(-45deg)
+                                -ms-transform: translateY(-13px) rotate(-45deg)
+                                -o-transform: translateY(-13px) rotate(-45deg)
+                                transform: scale(1.15) translateY(-9px) rotate(-45deg)
+
+                    //---open menu---
+                    //---- open burger ----
+
+                    @keyframes smallbig
+                        0%, 100%
+                            -webkit-transform: scale(1)
+                            -ms-transform: scale(1)
+                            -o-transform: scale(1)
+                            transform: scale(1)
+                        50%
+                            -webkit-transform: scale(0)
+                            -ms-transform: scale(0)
+                            -o-transform: scale(0)
+                            transform: scale(0)
+
+            //---- open nav ----
+
+            nav.nav.open
+                ul.nav-list
+                    visibility: inherit
+                    padding-inline-start: 6.45em
+                    a
+                        font-size: var(--font-size-modalmenu)
+                display: flex
+                visibility: visible
+                width: 80.75vw
+                right: 0
+                box-shadow: 0 0 0 9999px rgb(0 0 0 / 50%)
+                transition: all 1s ease-in-out
+                
+                        
+                
+
+    //--section hero--
+
+    .hero-container
+        background: url('assets/img/jpg/768/bg768.jpg')
+        box-sizing: border-box
+        max-width: 768px
+        height: 500px
+        padding-top: 78px
+        padding-left: 60px
+        background-position: center -89px
+        background-repeat: no-repeat
+
+    h1
+        font-family: Merriweather, sans-serif
+        font-style: normal
+        font-weight: normal
+        line-height: 64px
+        font-size: var(--font-size-h1)
+        margin: auto
+
+    .hero-text
+        padding-right: 2.75em
+        line-height: 1.2em
+
+    .hero-container > .hero-text > button
+        margin-block-start: 2em
+
+    //--section skills --
+
+    .section-title-wrapper
+        padding-block-start: 3.65em
+
+    hr
+        width: 5.75em
+
+    .skills-items
+        padding: 2em 2em 0
+
+    .skill-item
+        padding-top: 3.85em
+        height: 9.15em
+
+    p.card-descr
+        margin-block: 0
+        padding-block-start: 1em
+        line-height: 1.2em
+
+    section
+        &#skills.section
+            padding-block-end: 0.9em
+
+        &#portfolio > .section-title-wrapper > hr
+            width: 4.35em
+
+    //--portfolio --
+
+    .portfolio-buttons
+        padding-inline: 7em
+        flex-wrap: wrap
+
+    .portfolio-images
+        padding-block: 2.9em
+        padding-inline: 20.75%
+        gap: 3.4vw
+
+        > img
+            width: 100%
+
+    //-- section video --
+
+    section
+        &#video >
+            .section-title-wrapper
+                padding-block: 0.8em
+
+        .video-player
+            padding: 1.35em 0
+
+        &#price > .section-title-wrapper
+            padding-block-start: 2.1em
+
+    //--section price --
+
+    .price-items
+        flex-wrap: wrap
+        gap: 6vw
+        padding: 2px 22vw
+
+    //-- section contacts --
+
+    section#contacts
+        height: 600px
+        margin-block-start: 3.8em
+        background: url('./assets/img/jpg/768/contacts768.jpg')
+        background-size: auto 600px
+
+    .contacts-form
+        margin: auto
+
+    section#contacts > .contacts-container > .contacts-form >
+        h2
+            align-self: center
+            margin-block: 0.375em
+
+        form
+            text-align: center
+
+        > textarea
+            padding-block-start: 0px
+            line-height: 2.35em
+            padding-block-start: 0px
+
+    //footer
+
+    .footer-container
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        line-height: 2em
+        padding-block-start: 1em
+        a
+            text-align: center
+        .social
+            margin-inline-end: 0.8em
+            padding-block-start: 0.5em
